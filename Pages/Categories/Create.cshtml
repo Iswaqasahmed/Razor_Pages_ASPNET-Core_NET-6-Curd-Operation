@@ -1,0 +1,45 @@
+﻿@page
+@model Razor_Pages_ASPNET_Core_NET_6.Pages.Categories.CreateModel
+
+
+<style>
+
+    .category {
+        margin-left: 98px
+    }
+
+    .displayorder {
+        margin-left: 155px
+    }
+</style>
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row bp-2">
+            <h3 class="textbtn-primary pl-3">
+                Create Category
+            </h3>
+        </div>
+
+        <br />  
+        <div class="mb-3">
+            @*Name: <input class="displayorder" type="text" name="Name" />*@
+
+            <label asp-for="Categories.Name"></label>
+            <input asp-for="Categories.Name" class="displayorder" type="text" name="Name"/>
+            <span asp-validation-for="Categories.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            @*Display Order: <input class="category" type="text" name="displayOrder" />*@
+
+            <label asp-for="Categories.DisplayOrder"></label>
+            <input asp-for="Categories.DisplayOrder" class="category" type="text" name="DisplayOrder"/>
+            <span asp-validation-for="Categories.DisplayOrder" class="text-danger"></span>
+            
+        </div>
+        <button type="submit" class="btn-primary btn text-center">Create</button>
+
+    </div>
+</form>
+
